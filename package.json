@@ -1,0 +1,18 @@
+{
+  "name": "typescript-computed-bem-display-name",
+  "version": "1.0.0",
+  "description": "Improve the debugging experience to bem-react-core",
+  "main": "./lib/index.js",
+  "keywords": ["bem", "bem-react-core", "displayName", "typescript"],
+  "author": "Tropin Eugeniy <yarastqt@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "typescript": "^2.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.0"
+  }
+}

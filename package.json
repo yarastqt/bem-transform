@@ -18,6 +18,11 @@
     "typescript": "^2.9.2"
   },
   "devDependencies": {
-    "@types/node": "^10.5.0"
+    "@types/node": "^10.5.0",
+    "tslint": "^5.10.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test:lint": "tslint ./src/**/*.ts"
   }
 }

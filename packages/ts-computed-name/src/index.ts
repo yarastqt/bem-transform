@@ -6,9 +6,9 @@ import pascalCase from 'pascal-case'
 const not = (value: boolean) => !value
 
 interface IOptions {
-  availableClassExtends: string[],
-  generateBemName: boolean,
-  generateDisplayName: boolean,
+  availableClassParent: string[],
+  availibleBemName: boolean,
+  availibleDisplayName: boolean,
   naming: 'origin' | 'react',
   overrideExistingProperties: boolean,
 }
@@ -56,9 +56,9 @@ function hasProperty(members: TS.ClassElement[], names: string[]) {
 }
 
 const defaultConfig = {
-  availableClassExtends: ['Block', 'Elem'],
-  generateBemName: true,
-  generateDisplayName: true,
+  availableClassParent: ['Block', 'Elem'],
+  availibleBemName: true,
+  availibleDisplayName: true,
   naming: 'origin',
   overrideExistingProperties: true,
 }
@@ -91,7 +91,7 @@ export function computeClassBemName(config?: IOptions) {
           if (node.heritageClauses !== undefined && node.heritageClauses[0] !== undefined) {
             const { expression } = node.heritageClauses[0].types[0]
             // Skip this node if class not extend from Block or Elem by default
-            if (TS.isIdentifier(expression) && not(options.availableClassExtends.includes(expression.text))) {
+            if (TS.isIdentifier(expression) && not(options.availableClassParent.includes(expression.text))) {
               return node
             }
           }
@@ -103,7 +103,7 @@ export function computeClassBemName(config?: IOptions) {
           if (options.overrideExistingProperties) {
             const propertyNames = ['block', 'elem']
 
-            if (options.generateDisplayName) {
+            if (options.availibleDisplayName) {
               propertyNames.push('displayName')
             }
 
@@ -114,7 +114,7 @@ export function computeClassBemName(config?: IOptions) {
             ))
           }
 
-          if (options.generateBemName) {
+          if (options.availibleBemName) {
             if (options.overrideExistingProperties || not(hasProperty(members, ['block', 'elem']))) {
               const properties = Object.keys(entity)
                 .map((key) => createProperty({
@@ -127,7 +127,7 @@ export function computeClassBemName(config?: IOptions) {
             }
           }
 
-          if (options.generateDisplayName) {
+          if (options.availibleDisplayName) {
             if (options.overrideExistingProperties || not(hasProperty(members, ['displayName']))) {
               const property = createProperty({
                 name: 'displayName',

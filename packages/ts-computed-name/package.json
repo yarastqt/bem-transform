@@ -19,8 +19,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "test:lint": "tslint ./src/**/*.ts",
+    "prepare": "npm run build",
+    "prepush": "npm run test",
+    "test": "npm run test:js && npm run test:lint",
+    "test:js:update": "npm run test:js -- -u",
     "test:js": "jest --config ../../jest.config.js",
-    "test:js:update": "npm run test:js -- -u"
+    "test:lint": "tslint ./src/**/*.ts"
   }
 }

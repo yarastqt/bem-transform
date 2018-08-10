@@ -7,6 +7,14 @@
     "bem-react-core",
     "typescript"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/yarastqt/bem-transform/issues"
+  },
+  "homepage": "https://github.com/yarastqt/bem-transform/tree/master/packages/ts-computed-name#readme",
+  "repository": "yarastqt/bem-transform",
   "author": "Tropin Eugeniy <yarastqt@gmail.com>",
   "license": "MIT",
   "files": [

@@ -18,6 +18,7 @@
     "typescript": "^2.9.2"
   },
   "scripts": {
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "prepush": "lerna run test"
   }
 }

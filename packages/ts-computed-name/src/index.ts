@@ -3,14 +3,15 @@ import * as presets from '@bem/sdk.naming.presets'
 import match from '@bem/sdk.naming.cell.match'
 import pascalCase from 'pascal-case'
 
+
 const not = (value: boolean) => !value
 
-interface IOptions {
-  availableClassParent: string[],
-  availibleBemName: boolean,
-  availibleDisplayName: boolean,
-  naming: 'origin' | 'react',
-  overrideExistingProperties: boolean,
+export interface IOptions {
+  availableClassParent?: string[],
+  availibleBemName?: boolean,
+  availibleDisplayName?: boolean,
+  naming?: 'origin' | 'react',
+  overrideExistingProperties?: boolean,
 }
 
 interface IPropertyOptions {

@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "@types/node": "^10.5.0",
-    "tslint": "^5.10.0"
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2"
   },
   "scripts": {
     "build": "tsc",

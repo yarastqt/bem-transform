@@ -15,11 +15,12 @@
   "dependencies": {
     "@bem/sdk.naming.cell.match": "^0.1.1",
     "@bem/sdk.naming.presets": "^0.2.2",
-    "pascal-case": "^2.0.1",
-    "typescript": "^2.9.2"
+    "pascal-case": "^2.0.1"
   },
   "scripts": {
     "build": "tsc",
-    "test:lint": "tslint ./src/**/*.ts"
+    "test:lint": "tslint ./src/**/*.ts",
+    "test:js": "jest --config ../../jest.config.js",
+    "test:js:update": "npm run test:js -- -u"
   }
 }

@@ -1,17 +1,17 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint-config-airbnb"
-    ],
-    "rules": {
-        "quotemark": [true, "single"],
-        "semicolon": [true, "never"],
-        "indent": [true, "spaces", 2],
-        "no-consecutive-blank-lines": [true, 2],
-        "ordered-imports": false,
-        "ter-arrow-parens": [true, "always"],
-        "max-line-length": [true, 120],
-        "brace-style": [true, "stroustrup"],
-        "import-name": false
-    }
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "quotemark": [true, "single"],
+    "semicolon": [true, "never"],
+    "indent": [true, "spaces", 2],
+    "no-consecutive-blank-lines": [true, 2],
+    "ordered-imports": false,
+    "ter-arrow-parens": [true, "always"],
+    "max-line-length": [true, 120],
+    "brace-style": [true, "stroustrup"],
+    "import-name": false
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "lerna": "2.5.1",
+  "packages": [
+    "packages/*"
+  ],
+  "independent": true,
+  "npmClient": "npm",
+  "npmClientArgs": ["--no-package-lock"],
+  "version": "independent"
+}

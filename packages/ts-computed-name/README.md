@@ -1,5 +1,7 @@
 # @bem-transform/ts-computed-name
 
+Compute name of block and elem for BEM components.
+
 ## Requirement
 
 ```

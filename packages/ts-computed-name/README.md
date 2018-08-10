@@ -40,7 +40,7 @@ Need add this transform into [getCustomTransformers](https://github.com/s-panfer
 },
 ```
 
-## Available options
+## Options
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |

@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`naming::origin should add block, elem property 1`] = `
+"class MyBlock extends Block {
+    constructor() {
+        super(...arguments);
+        this.block = \\"my-block-1\\";
+    }
+}
+"
+`;
+
+exports[`naming::origin should add block, elem property 2`] = `
+"class MyElem extends Elem {
+    constructor() {
+        super(...arguments);
+        this.block = \\"my-block-1\\";
+        this.elem = \\"elem\\";
+    }
+}
+"
+`;
+
+exports[`naming::origin should add block, elem, and displayName property 1`] = `
+"class MyBlock extends Block {
+    constructor() {
+        super(...arguments);
+        this.block = \\"my-block-1\\";
+    }
+}
+MyBlock.displayName = \\"MyBlock_1\\";
+"
+`;
+
+exports[`naming::origin should add block, elem, and displayName property 2`] = `
+"class MyElem extends Elem {
+    constructor() {
+        super(...arguments);
+        this.block = \\"my-block-1\\";
+        this.elem = \\"elem\\";
+    }
+}
+MyElem.displayName = \\"MyBlock_1-Elem\\";
+"
+`;
+
+exports[`naming::origin should add displayName property 1`] = `
+"class MyBlock extends Block {
+}
+MyBlock.displayName = \\"MyBlock_1\\";
+"
+`;
+
+exports[`naming::origin should add displayName property 2`] = `
+"class MyElem extends Elem {
+}
+MyElem.displayName = \\"MyBlock_1-Elem\\";
+"
+`;
+
+exports[`naming::origin should not add block, elem, and displayName if parent class not incorrect 1`] = `
+"class MyBlock extends Block {
+}
+"
+`;
+
+exports[`naming::origin should not add block, elem, and displayName if parent class not incorrect 2`] = `
+"class MyElem extends Elem {
+}
+"
+`;
+
+exports[`naming::origin should not add block, elem, and displayName property if they already defined 1`] = `
+"class MyBlock extends Block {
+    constructor() {
+        super(...arguments);
+        this.block = 'Block';
+    }
+}
+MyBlock.displayName = 'Block';
+"
+`;
+
+exports[`naming::origin should not add block, elem, and displayName property if they already defined 2`] = `
+"class MyElem extends Elem {
+    constructor() {
+        super(...arguments);
+        this.block = 'Block';
+        this.elem = 'Elem';
+    }
+}
+MyElem.displayName = 'Block';
+"
+`;
+
+exports[`naming::origin should override block, elem, and displayName property 1`] = `
+"class MyBlock extends Block {
+    constructor() {
+        super(...arguments);
+        this.block = \\"my-block-2\\";
+    }
+}
+MyBlock.displayName = \\"MyBlock_2\\";
+"
+`;
+
+exports[`naming::origin should override block, elem, and displayName property 2`] = `
+"class MyElem extends Elem {
+    constructor() {
+        super(...arguments);
+        this.block = \\"my-block-2\\";
+        this.elem = \\"elem\\";
+    }
+}
+MyElem.displayName = \\"MyBlock_2-Elem\\";
+"
+`;

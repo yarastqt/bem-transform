@@ -2,15 +2,10 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "commonjs",
-    "outDir": "./lib",
-    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "pretty": true,
     "lib": ["es2015", "es2016"]
-  },
-  "include": [
-    "src"
-  ]
+  }
 }

@@ -3,6 +3,7 @@
   "packages": [
     "packages/*"
   ],
+  "hoist": true,
   "independent": true,
   "npmClient": "npm",
   "npmClientArgs": ["--no-package-lock"],

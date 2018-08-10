@@ -1,29 +1,12 @@
 {
-  "name": "typescript-computed-bem-display-name",
-  "version": "1.0.0",
-  "description": "Improve the debugging experience to bem-react-core",
-  "main": "./lib/index.js",
-  "keywords": [
-    "bem",
-    "bem-react-core",
-    "displayName",
-    "typescript"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "author": "Tropin Eugeniy <yarastqt@gmail.com>",
-  "license": "MIT",
-  "files": [
-    "lib"
-  ],
-  "dependencies": {
-    "typescript": "^2.9.2"
-  },
   "devDependencies": {
     "@types/node": "^10.5.0",
+    "lerna": "^2.5.1",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.9.2"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test:lint": "tslint ./src/**/*.ts"
   }
 }

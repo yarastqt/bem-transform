@@ -6,6 +6,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/node": "^10.5.0",
+    "conventional-changelog": "^2.0.1",
     "husky": "^0.14.3",
     "jest": "^23.5.0",
     "lerna": "^2.5.1",
@@ -16,5 +17,8 @@
   },
   "dependencies": {
     "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   }
 }

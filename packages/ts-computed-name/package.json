@@ -1,0 +1,25 @@
+{
+  "name": "@bem-transform/ts-computed-name",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "keywords": [
+    "bem",
+    "bem-react-core",
+    "typescript"
+  ],
+  "author": "Tropin Eugeniy <yarastqt@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@bem/sdk.naming.cell.match": "^0.1.1",
+    "@bem/sdk.naming.presets": "^0.2.2",
+    "pascal-case": "^2.0.1",
+    "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test:lint": "tslint ./src/**/*.ts"
+  }
+}

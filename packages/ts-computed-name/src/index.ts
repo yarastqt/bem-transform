@@ -89,12 +89,16 @@ export function computeClassBemName(config?: IOptions) {
           }
 
           // At zero position always should be extend declaration
+          // Skip this node if class does not have extended
           if (node.heritageClauses !== undefined && node.heritageClauses[0] !== undefined) {
             const { expression } = node.heritageClauses[0].types[0]
             // Skip this node if class not extend from Block or Elem by default
             if (TS.isIdentifier(expression) && not(options.availableClassParent.includes(expression.text))) {
               return node
             }
+          }
+          else {
+            return node
           }
 
           // Copy all values because members cannot be rewritten

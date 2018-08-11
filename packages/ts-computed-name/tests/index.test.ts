@@ -34,4 +34,9 @@ describe('naming::origin', () => {
     expect(compile('my-block-1/my-block-1.ts', { availableClassParent: ['YBlock', 'YElem'] })).toMatchSnapshot()
     expect(compile('my-block-1/__elem/my-block-1__elem.ts', { availableClassParent: ['YBlock', 'YElem'] })).toMatchSnapshot()
   })
+
+  it('should not add block, elem, and displayName if class does not have extended', () => {
+    expect(compile('my-block-3/my-block-3.ts')).toMatchSnapshot()
+    expect(compile('my-block-3/__elem/my-block-3__elem.ts')).toMatchSnapshot()
+  })
 })

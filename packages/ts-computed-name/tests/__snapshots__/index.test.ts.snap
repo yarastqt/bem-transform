@@ -58,6 +58,18 @@ MyElem.displayName = \\"MyBlock_1-Elem\\";
 "
 `;
 
+exports[`naming::origin should not add block, elem, and displayName if class does not have extended 1`] = `
+"class MyBlock {
+}
+"
+`;
+
+exports[`naming::origin should not add block, elem, and displayName if class does not have extended 2`] = `
+"class MyElem {
+}
+"
+`;
+
 exports[`naming::origin should not add block, elem, and displayName if parent class not incorrect 1`] = `
 "class MyBlock extends Block {
 }
